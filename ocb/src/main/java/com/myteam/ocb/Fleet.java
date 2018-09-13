@@ -27,11 +27,11 @@ public class Fleet implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Filter")
 	private java.lang.Boolean filter;
 	@org.kie.api.definition.type.Label("Current Time")
-	private java.time.LocalTime currentTime;
+	private Integer currentTime;
 	@org.kie.api.definition.type.Label("Current Capacity")
 	private java.lang.Integer currentCapacity;
 
-	@org.kie.api.definition.type.Label(value = "Price")
+	@org.kie.api.definition.type.Label("Price")
 	private java.util.List<com.myteam.ocb.Price> price;
 
 	public Fleet() {
@@ -109,14 +109,6 @@ public class Fleet implements java.io.Serializable {
 		this.filter = filter;
 	}
 
-	public java.time.LocalTime getCurrentTime() {
-		return this.currentTime;
-	}
-
-	public void setCurrentTime(java.time.LocalTime currentTime) {
-		this.currentTime = currentTime;
-	}
-
 	public java.lang.Integer getCurrentCapacity() {
 		return this.currentCapacity;
 	}
@@ -133,12 +125,20 @@ public class Fleet implements java.io.Serializable {
 		this.price = price;
 	}
 
+	public java.lang.Integer getCurrentTime() {
+		return this.currentTime;
+	}
+
+	public void setCurrentTime(java.lang.Integer currentTime) {
+		this.currentTime = currentTime;
+	}
+
 	public Fleet(java.lang.String id, java.lang.String name,
 			java.lang.Integer targetCapacity,
 			java.lang.String availabilityZone, java.lang.String instanceType,
 			java.lang.Integer cpuLoad, java.lang.Integer memoryLoad,
 			java.lang.Integer networkLoad, java.lang.Boolean filter,
-			java.time.LocalTime currentTime, java.lang.Integer currentCapacity,
+			java.lang.Integer currentTime, java.lang.Integer currentCapacity,
 			java.util.List<com.myteam.ocb.Price> price) {
 		this.id = id;
 		this.name = name;
