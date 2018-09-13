@@ -6,12 +6,139 @@ package com.myteam.ocb;
 
 public class Fleet implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Fleet() {
-    }
+	@org.kie.api.definition.type.Label(value = "ID")
+	private java.lang.String id;
+	@org.kie.api.definition.type.Label(value = "Name")
+	private java.lang.String name;
+	@org.kie.api.definition.type.Label(value = "Target Capacity")
+	private java.lang.Integer targetCapacity;
+	@org.kie.api.definition.type.Label(value = "Availability Zone")
+	private java.lang.String availabilityZone;
+	@org.kie.api.definition.type.Label(value = "Instance Type")
+	private java.lang.String instanceType;
+	@org.kie.api.definition.type.Label(value = "CPU Load")
+	private java.lang.Integer cpuLoad;
+	@org.kie.api.definition.type.Label(value = "Memory Load")
+	private java.lang.Integer memoryLoad;
+	@org.kie.api.definition.type.Label(value = "Network Load")
+	private java.lang.Integer networkLoad;
+	@org.kie.api.definition.type.Label(value = "Filter")
+	private java.lang.Boolean filter;
+	@org.kie.api.definition.type.Label(value = "Current Time")
+	private java.time.LocalTime currentTime;
+	@org.kie.api.definition.type.Label(value = "Current Capacity")
+	private java.lang.Integer currentCapacity;
 
+	public Fleet() {
+	}
 
+	public java.lang.String getId() {
+		return this.id;
+	}
 
+	public void setId(java.lang.String id) {
+		this.id = id;
+	}
+
+	public java.lang.String getName() {
+		return this.name;
+	}
+
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public java.lang.Integer getTargetCapacity() {
+		return this.targetCapacity;
+	}
+
+	public void setTargetCapacity(java.lang.Integer targetCapacity) {
+		this.targetCapacity = targetCapacity;
+	}
+
+	public java.lang.String getAvailabilityZone() {
+		return this.availabilityZone;
+	}
+
+	public void setAvailabilityZone(java.lang.String availabilityZone) {
+		this.availabilityZone = availabilityZone;
+	}
+
+	public java.lang.String getInstanceType() {
+		return this.instanceType;
+	}
+
+	public void setInstanceType(java.lang.String instanceType) {
+		this.instanceType = instanceType;
+	}
+
+	public java.lang.Integer getCpuLoad() {
+		return this.cpuLoad;
+	}
+
+	public void setCpuLoad(java.lang.Integer cpuLoad) {
+		this.cpuLoad = cpuLoad;
+	}
+
+	public java.lang.Integer getMemoryLoad() {
+		return this.memoryLoad;
+	}
+
+	public void setMemoryLoad(java.lang.Integer memoryLoad) {
+		this.memoryLoad = memoryLoad;
+	}
+
+	public java.lang.Integer getNetworkLoad() {
+		return this.networkLoad;
+	}
+
+	public void setNetworkLoad(java.lang.Integer networkLoad) {
+		this.networkLoad = networkLoad;
+	}
+
+	public java.lang.Boolean getFilter() {
+		return this.filter;
+	}
+
+	public void setFilter(java.lang.Boolean filter) {
+		this.filter = filter;
+	}
+
+	public java.time.LocalTime getCurrentTime() {
+		return this.currentTime;
+	}
+
+	public void setCurrentTime(java.time.LocalTime currentTime) {
+		this.currentTime = currentTime;
+	}
+
+	public java.lang.Integer getCurrentCapacity() {
+		return this.currentCapacity;
+	}
+
+	public void setCurrentCapacity(java.lang.Integer currentCapacity) {
+		this.currentCapacity = currentCapacity;
+	}
+
+	public Fleet(java.lang.String id, java.lang.String name,
+			java.lang.Integer targetCapacity,
+			java.lang.String availabilityZone, java.lang.String instanceType,
+			java.lang.Integer cpuLoad, java.lang.Integer memoryLoad,
+			java.lang.Integer networkLoad, java.lang.Boolean filter,
+			java.time.LocalTime currentTime, java.lang.Integer currentCapacity) {
+		this.id = id;
+		this.name = name;
+		this.targetCapacity = targetCapacity;
+		this.availabilityZone = availabilityZone;
+		this.instanceType = instanceType;
+		this.cpuLoad = cpuLoad;
+		this.memoryLoad = memoryLoad;
+		this.networkLoad = networkLoad;
+		this.filter = filter;
+		this.currentTime = currentTime;
+		this.currentCapacity = currentCapacity;
+	}
 
 }
