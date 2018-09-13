@@ -8,28 +8,31 @@ public class Fleet implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "ID")
+	@org.kie.api.definition.type.Label("ID")
 	private java.lang.String id;
-	@org.kie.api.definition.type.Label(value = "Name")
+	@org.kie.api.definition.type.Label("Name")
 	private java.lang.String name;
-	@org.kie.api.definition.type.Label(value = "Target Capacity")
+	@org.kie.api.definition.type.Label("Target Capacity")
 	private java.lang.Integer targetCapacity;
-	@org.kie.api.definition.type.Label(value = "Availability Zone")
+	@org.kie.api.definition.type.Label("Availability Zone")
 	private java.lang.String availabilityZone;
-	@org.kie.api.definition.type.Label(value = "Instance Type")
+	@org.kie.api.definition.type.Label("Instance Type")
 	private java.lang.String instanceType;
-	@org.kie.api.definition.type.Label(value = "CPU Load")
+	@org.kie.api.definition.type.Label("CPU Load")
 	private java.lang.Integer cpuLoad;
-	@org.kie.api.definition.type.Label(value = "Memory Load")
+	@org.kie.api.definition.type.Label("Memory Load")
 	private java.lang.Integer memoryLoad;
-	@org.kie.api.definition.type.Label(value = "Network Load")
+	@org.kie.api.definition.type.Label("Network Load")
 	private java.lang.Integer networkLoad;
-	@org.kie.api.definition.type.Label(value = "Filter")
+	@org.kie.api.definition.type.Label("Filter")
 	private java.lang.Boolean filter;
-	@org.kie.api.definition.type.Label(value = "Current Time")
+	@org.kie.api.definition.type.Label("Current Time")
 	private java.time.LocalTime currentTime;
-	@org.kie.api.definition.type.Label(value = "Current Capacity")
+	@org.kie.api.definition.type.Label("Current Capacity")
 	private java.lang.Integer currentCapacity;
+
+	@org.kie.api.definition.type.Label(value = "Price")
+	private java.util.List<com.myteam.ocb.Price> price;
 
 	public Fleet() {
 	}
@@ -122,12 +125,21 @@ public class Fleet implements java.io.Serializable {
 		this.currentCapacity = currentCapacity;
 	}
 
+	public java.util.List<com.myteam.ocb.Price> getPrice() {
+		return this.price;
+	}
+
+	public void setPrice(java.util.List<com.myteam.ocb.Price> price) {
+		this.price = price;
+	}
+
 	public Fleet(java.lang.String id, java.lang.String name,
 			java.lang.Integer targetCapacity,
 			java.lang.String availabilityZone, java.lang.String instanceType,
 			java.lang.Integer cpuLoad, java.lang.Integer memoryLoad,
 			java.lang.Integer networkLoad, java.lang.Boolean filter,
-			java.time.LocalTime currentTime, java.lang.Integer currentCapacity) {
+			java.time.LocalTime currentTime, java.lang.Integer currentCapacity,
+			java.util.List<com.myteam.ocb.Price> price) {
 		this.id = id;
 		this.name = name;
 		this.targetCapacity = targetCapacity;
@@ -139,6 +151,7 @@ public class Fleet implements java.io.Serializable {
 		this.filter = filter;
 		this.currentTime = currentTime;
 		this.currentCapacity = currentCapacity;
+		this.price = price;
 	}
 
 }
