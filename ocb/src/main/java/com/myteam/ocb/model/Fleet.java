@@ -31,9 +31,6 @@ public class Fleet implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Current Capacity")
 	private java.lang.Integer currentCapacity;
 
-	@org.kie.api.definition.type.Label("Price")
-	private java.util.List<com.myteam.ocb.model.Price> price;
-
 	public Fleet() {
 	}
 
@@ -117,14 +114,6 @@ public class Fleet implements java.io.Serializable {
 		this.currentCapacity = currentCapacity;
 	}
 
-	public java.util.List<com.myteam.ocb.Price> getPrice() {
-		return this.price;
-	}
-
-	public void setPrice(java.util.List<com.myteam.ocb.Price> price) {
-		this.price = price;
-	}
-
 	public java.lang.Integer getCurrentTime() {
 		return this.currentTime;
 	}
@@ -152,6 +141,25 @@ public class Fleet implements java.io.Serializable {
 		this.currentTime = currentTime;
 		this.currentCapacity = currentCapacity;
 		this.price = price;
+	}
+
+	public Fleet(java.lang.String id, java.lang.String name,
+			java.lang.Integer targetCapacity,
+			java.lang.String availabilityZone, java.lang.String instanceType,
+			java.lang.Integer cpuLoad, java.lang.Integer memoryLoad,
+			java.lang.Integer networkLoad, java.lang.Boolean filter,
+			java.lang.Integer currentTime, java.lang.Integer currentCapacity) {
+		this.id = id;
+		this.name = name;
+		this.targetCapacity = targetCapacity;
+		this.availabilityZone = availabilityZone;
+		this.instanceType = instanceType;
+		this.cpuLoad = cpuLoad;
+		this.memoryLoad = memoryLoad;
+		this.networkLoad = networkLoad;
+		this.filter = filter;
+		this.currentTime = currentTime;
+		this.currentCapacity = currentCapacity;
 	}
 
 }
