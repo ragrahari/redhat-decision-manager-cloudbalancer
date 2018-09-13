@@ -127,8 +127,7 @@ public class Fleet implements java.io.Serializable {
 			java.lang.String availabilityZone, java.lang.String instanceType,
 			java.lang.Integer cpuLoad, java.lang.Integer memoryLoad,
 			java.lang.Integer networkLoad, java.lang.Boolean filter,
-			java.lang.Integer currentTime, java.lang.Integer currentCapacity,
-			java.util.List<com.myteam.ocb.Price> price) {
+			java.lang.Integer currentTime, java.lang.Integer currentCapacity) {
 		this.id = id;
 		this.name = name;
 		this.targetCapacity = targetCapacity;
@@ -140,7 +139,6 @@ public class Fleet implements java.io.Serializable {
 		this.filter = filter;
 		this.currentTime = currentTime;
 		this.currentCapacity = currentCapacity;
-		this.price = price;
 	}
 
 	public Fleet(java.lang.String id, java.lang.String name,
