@@ -32,7 +32,7 @@ public class Fleet implements java.io.Serializable {
 	private java.lang.Integer currentCapacity;
 
 	@org.kie.api.definition.type.Label("Price")
-	private java.util.List<com.myteam.ocb.Price> price;
+	private java.util.List<com.myteam.ocb.model.Price> price;
 
 	public Fleet() {
 	}
