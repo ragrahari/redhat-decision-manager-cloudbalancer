@@ -23,7 +23,7 @@
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
-          <width>100</width>
+          <width>290</width>
           <header>ID</header>
           <constraintValueType>1</constraintValueType>
           <factField>id</factField>
@@ -45,7 +45,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>100</width>
+      <width>161</width>
       <header>Target Capacity</header>
       <boundName>fleetObject</boundName>
       <factField>targetCapacity</factField>
@@ -59,7 +59,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>100</width>
+      <width>160</width>
       <header>Filter</header>
       <boundName>fleetObject</boundName>
       <factField>filter</factField>
