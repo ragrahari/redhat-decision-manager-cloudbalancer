@@ -6,12 +6,24 @@ package com.model;
 
 public class Fleet implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Fleet() {
-    }
+	@org.kie.api.definition.type.Label(value = "ID")
+	private java.lang.String id;
 
+	public Fleet() {
+	}
 
+	public java.lang.String getId() {
+		return this.id;
+	}
 
+	public void setId(java.lang.String id) {
+		this.id = id;
+	}
+
+	public Fleet(java.lang.String id) {
+		this.id = id;
+	}
 
 }
