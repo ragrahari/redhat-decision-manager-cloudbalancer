@@ -14,9 +14,6 @@ public class Fleet implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("TargetCapacity")
 	private java.lang.Integer targetCapacity;
 
-	@org.kie.api.definition.type.Label(value = "Name")
-	private java.lang.String name;
-
 	public Fleet() {
 	}
 
@@ -36,19 +33,9 @@ public class Fleet implements java.io.Serializable {
 		this.targetCapacity = targetCapacity;
 	}
 
-	public java.lang.String getName() {
-		return this.name;
-	}
-
-	public void setName(java.lang.String name) {
-		this.name = name;
-	}
-
-	public Fleet(java.lang.String id, java.lang.Integer targetCapacity,
-			java.lang.String name) {
+	public Fleet(java.lang.String id, java.lang.Integer targetCapacity) {
 		this.id = id;
 		this.targetCapacity = targetCapacity;
-		this.name = name;
 	}
 
 }
