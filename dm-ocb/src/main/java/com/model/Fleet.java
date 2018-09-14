@@ -14,8 +14,11 @@ public class Fleet implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("TargetCapacity")
 	private java.lang.Integer targetCapacity;
 
-	@org.kie.api.definition.type.Label(value = "Name")
+	@org.kie.api.definition.type.Label("Name")
 	private java.lang.String name;
+
+	@org.kie.api.definition.type.Label(value = "AvailabilityZone")
+	private java.lang.String availabilityZone;
 
 	public Fleet() {
 	}
@@ -44,11 +47,20 @@ public class Fleet implements java.io.Serializable {
 		this.name = name;
 	}
 
+	public java.lang.String getAvailabilityZone() {
+		return this.availabilityZone;
+	}
+
+	public void setAvailabilityZone(java.lang.String availabilityZone) {
+		this.availabilityZone = availabilityZone;
+	}
+
 	public Fleet(java.lang.String id, java.lang.Integer targetCapacity,
-			java.lang.String name) {
+			java.lang.String name, java.lang.String availabilityZone) {
 		this.id = id;
 		this.targetCapacity = targetCapacity;
 		this.name = name;
+		this.availabilityZone = availabilityZone;
 	}
 
 }
