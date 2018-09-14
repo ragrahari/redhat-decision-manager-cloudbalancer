@@ -1,0 +1,9 @@
+package com.myteam.ruletest;
+
+import java.lang.Number;
+
+rule "checkName"
+	dialect "mvel"
+	when
+	then
+end
