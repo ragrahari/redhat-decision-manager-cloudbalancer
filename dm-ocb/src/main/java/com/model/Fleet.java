@@ -17,8 +17,14 @@ public class Fleet implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Name")
 	private java.lang.String name;
 
-	@org.kie.api.definition.type.Label(value = "AvailabilityZone")
+	@org.kie.api.definition.type.Label("AvailabilityZone")
 	private java.lang.String availabilityZone;
+
+	@org.kie.api.definition.type.Label(value = "CurrentTime")
+	private java.lang.Integer currentTime;
+
+	@org.kie.api.definition.type.Label(value = "Filter")
+	private java.lang.Boolean filter;
 
 	public Fleet() {
 	}
@@ -55,12 +61,31 @@ public class Fleet implements java.io.Serializable {
 		this.availabilityZone = availabilityZone;
 	}
 
+	public java.lang.Integer getCurrentTime() {
+		return this.currentTime;
+	}
+
+	public void setCurrentTime(java.lang.Integer currentTime) {
+		this.currentTime = currentTime;
+	}
+
+	public java.lang.Boolean getFilter() {
+		return this.filter;
+	}
+
+	public void setFilter(java.lang.Boolean filter) {
+		this.filter = filter;
+	}
+
 	public Fleet(java.lang.String id, java.lang.Integer targetCapacity,
-			java.lang.String name, java.lang.String availabilityZone) {
+			java.lang.String name, java.lang.String availabilityZone,
+			java.lang.Integer currentTime, java.lang.Boolean filter) {
 		this.id = id;
 		this.targetCapacity = targetCapacity;
 		this.name = name;
 		this.availabilityZone = availabilityZone;
+		this.currentTime = currentTime;
+		this.filter = filter;
 	}
 
 }
