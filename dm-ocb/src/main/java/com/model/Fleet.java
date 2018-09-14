@@ -8,8 +8,11 @@ public class Fleet implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "ID")
+	@org.kie.api.definition.type.Label("ID")
 	private java.lang.String id;
+
+	@org.kie.api.definition.type.Label(value = "TargetCapacity")
+	private java.lang.Integer targetCapacity;
 
 	public Fleet() {
 	}
@@ -22,8 +25,17 @@ public class Fleet implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Fleet(java.lang.String id) {
+	public java.lang.Integer getTargetCapacity() {
+		return this.targetCapacity;
+	}
+
+	public void setTargetCapacity(java.lang.Integer targetCapacity) {
+		this.targetCapacity = targetCapacity;
+	}
+
+	public Fleet(java.lang.String id, java.lang.Integer targetCapacity) {
 		this.id = id;
+		this.targetCapacity = targetCapacity;
 	}
 
 }
