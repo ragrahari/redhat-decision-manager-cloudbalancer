@@ -2,24 +2,36 @@
   <tableName>AdHocFleetCalculation</tableName>
   <rowNumberCol>
     <hideColumn>false</hideColumn>
-    <width>-1</width>
+    <width>50</width>
   </rowNumberCol>
   <descriptionCol>
     <hideColumn>false</hideColumn>
-    <width>-1</width>
+    <width>150</width>
   </descriptionCol>
   <metadataCols/>
   <attributeCols>
     <attribute-column52>
+      <typedDefaultValue>
+        <valueDate>2018-09-15 23:26:24.576 UTC</valueDate>
+        <valueString></valueString>
+        <dataType>DATE</dataType>
+        <isOtherwise>false</isOtherwise>
+      </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>-1</width>
+      <width>100</width>
       <attribute>date-effective</attribute>
       <reverseOrder>false</reverseOrder>
       <useRowNumber>false</useRowNumber>
     </attribute-column52>
     <attribute-column52>
+      <typedDefaultValue>
+        <valueDate>2018-09-15 23:26:24.717 UTC</valueDate>
+        <valueString></valueString>
+        <dataType>DATE</dataType>
+        <isOtherwise>false</isOtherwise>
+      </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>-1</width>
+      <width>100</width>
       <attribute>date-expires</attribute>
       <reverseOrder>false</reverseOrder>
       <useRowNumber>false</useRowNumber>
@@ -31,6 +43,7 @@
       <width>-1</width>
       <header>Converted from [&apos;id&apos;, &apos;Override&apos;]</header>
       <constraintValueType>1</constraintValueType>
+      <parameters/>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FactPattern>
           <constraintList>
@@ -43,6 +56,7 @@
                   <parts/>
                   <index>2147483647</index>
                 </expression>
+                <parameters/>
                 <factType>Fleet</factType>
                 <fieldName>id</fieldName>
                 <fieldType>String</fieldType>
@@ -55,6 +69,7 @@
                   <parts/>
                   <index>2147483647</index>
                 </expression>
+                <parameters/>
                 <factType>Fleet</factType>
                 <fieldName>filter</fieldName>
                 <fieldType>String</fieldType>
@@ -64,26 +79,31 @@
           <factType>Fleet</factType>
           <boundName>fleetObject</boundName>
           <isNegated>false</isNegated>
+          <window>
+            <parameters/>
+          </window>
         </org.drools.workbench.models.datamodel.rule.FactPattern>
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>286</width>
           <header>id</header>
           <constraintValueType>1</constraintValueType>
           <factField>id</factField>
           <fieldType>String</fieldType>
+          <parameters/>
           <varName>param1</varName>
           <factType>Fleet</factType>
         </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Override</header>
           <constraintValueType>1</constraintValueType>
           <factField>filter</factField>
           <fieldType>String</fieldType>
+          <parameters/>
           <varName>param2</varName>
           <factType>Fleet</factType>
         </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
@@ -111,7 +131,7 @@
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>141</width>
           <header>Add Target Capacity</header>
           <varName>param3</varName>
           <fieldType>Numeric</fieldType>
@@ -132,7 +152,7 @@
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Log Rule Fire</header>
           <varName></varName>
           <fieldType>Boolean</fieldType>
@@ -140,6 +160,33 @@
       </childColumns>
     </org.drools.workbench.models.guided.dtable.shared.model.BRLActionColumn>
   </actionCols>
+  <auditLog>
+    <filter class="org.drools.guvnor.client.modeldriven.dt52.auditlog.DecisionTableAuditLogFilter">
+      <acceptedTypes>
+        <entry>
+          <string>INSERT_ROW</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
+          <string>INSERT_COLUMN</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
+          <string>DELETE_ROW</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
+          <string>DELETE_COLUMN</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
+          <string>UPDATE_COLUMN</string>
+          <boolean>false</boolean>
+        </entry>
+      </acceptedTypes>
+    </filter>
+    <entries/>
+  </auditLog>
   <imports>
     <imports>
       <org.kie.soup.project.datamodel.imports.Import>
@@ -154,6 +201,7 @@
     <list>
       <value>
         <valueNumeric class="int">1</valueNumeric>
+        <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -163,13 +211,15 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>&quot;27-Aug-2018&quot;</valueString>
-        <dataType>STRING</dataType>
+        <valueDate>2018-08-27 05:00:00.0 UTC</valueDate>
+        <valueString></valueString>
+        <dataType>DATE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>&quot;30-Sep-2018&quot;</valueString>
-        <dataType>STRING</dataType>
+        <valueDate>2018-09-30 05:00:00.0 UTC</valueDate>
+        <valueString></valueString>
+        <dataType>DATE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -178,17 +228,20 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>false</valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueNumeric>12</valueNumeric>
-        <dataType>NUMERIC_BIGDECIMAL</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
         <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueNumeric class="int">12</valueNumeric>
+        <valueString></valueString>
+        <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -196,6 +249,7 @@
     <list>
       <value>
         <valueNumeric class="int">2</valueNumeric>
+        <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -205,13 +259,15 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>&quot;27-Aug-2018&quot;</valueString>
-        <dataType>STRING</dataType>
+        <valueDate>2018-08-27 05:00:00.0 UTC</valueDate>
+        <valueString></valueString>
+        <dataType>DATE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>&quot;30-Aug-2018&quot;</valueString>
-        <dataType>STRING</dataType>
+        <valueDate>2018-08-30 05:00:00.0 UTC</valueDate>
+        <valueString></valueString>
+        <dataType>DATE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -220,17 +276,20 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>false</valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueNumeric>12</valueNumeric>
-        <dataType>NUMERIC_BIGDECIMAL</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
         <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueNumeric class="int">12</valueNumeric>
+        <valueString></valueString>
+        <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -238,6 +297,7 @@
     <list>
       <value>
         <valueNumeric class="int">3</valueNumeric>
+        <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -247,13 +307,15 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>&quot;27-Sep-2018&quot;</valueString>
-        <dataType>STRING</dataType>
+        <valueDate>2018-09-27 05:00:00.0 UTC</valueDate>
+        <valueString></valueString>
+        <dataType>DATE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>&quot;30-Sep-2018&quot;</valueString>
-        <dataType>STRING</dataType>
+        <valueDate>2018-09-30 05:00:00.0 UTC</valueDate>
+        <valueString></valueString>
+        <dataType>DATE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -262,17 +324,20 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>false</valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueNumeric>3</valueNumeric>
-        <dataType>NUMERIC_BIGDECIMAL</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
         <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueNumeric class="int">3</valueNumeric>
+        <valueString></valueString>
+        <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
