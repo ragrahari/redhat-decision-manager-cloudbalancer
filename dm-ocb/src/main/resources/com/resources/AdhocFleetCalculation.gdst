@@ -2,11 +2,11 @@
   <tableName>AdhocFleetCalculation</tableName>
   <rowNumberCol>
     <hideColumn>false</hideColumn>
-    <width>-1</width>
+    <width>50</width>
   </rowNumberCol>
   <descriptionCol>
     <hideColumn>false</hideColumn>
-    <width>-1</width>
+    <width>150</width>
   </descriptionCol>
   <metadataCols/>
   <attributeCols/>
@@ -23,7 +23,7 @@
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>ID</header>
           <constraintValueType>1</constraintValueType>
           <factField>id</factField>
@@ -38,7 +38,7 @@
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Override</header>
           <constraintValueType>1</constraintValueType>
           <factField>filter</factField>
@@ -53,7 +53,7 @@
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Test</header>
           <constraintValueType>1</constraintValueType>
           <factField>instanceType</factField>
@@ -68,20 +68,33 @@
     </Pattern52>
   </conditionPatterns>
   <actionCols>
-    <set-field-col52>
-      <typedDefaultValue>
-        <valueString></valueString>
-        <dataType>NUMERIC_INTEGER</dataType>
-        <isOtherwise>false</isOtherwise>
-      </typedDefaultValue>
+    <org.drools.workbench.models.guided.dtable.shared.model.BRLActionColumn>
       <hideColumn>false</hideColumn>
       <width>-1</width>
       <header>Add Target Capacity</header>
-      <boundName>f</boundName>
-      <factField>targetCapacity</factField>
-      <type>Integer</type>
-      <update>false</update>
-    </set-field-col52>
+      <definition>
+        <org.drools.workbench.models.datamodel.rule.ActionSetField>
+          <fieldValues>
+            <org.drools.workbench.models.datamodel.rule.ActionFieldValue>
+              <field>targetCapacity</field>
+              <value>$param+f.targetCapacity</value>
+              <nature>3</nature>
+              <type>Integer</type>
+            </org.drools.workbench.models.datamodel.rule.ActionFieldValue>
+          </fieldValues>
+          <variable>f</variable>
+        </org.drools.workbench.models.datamodel.rule.ActionSetField>
+      </definition>
+      <childColumns>
+        <org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
+          <hideColumn>false</hideColumn>
+          <width>100</width>
+          <header>Add Target Capacity</header>
+          <varName></varName>
+          <fieldType>Boolean</fieldType>
+        </org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
+      </childColumns>
+    </org.drools.workbench.models.guided.dtable.shared.model.BRLActionColumn>
   </actionCols>
   <auditLog>
     <filter class="org.drools.guvnor.client.modeldriven.dt52.auditlog.DecisionTableAuditLogFilter">
@@ -120,5 +133,41 @@
   <packageName>com.resources</packageName>
   <tableFormat>EXTENDED_ENTRY</tableFormat>
   <hitPolicy>NONE</hitPolicy>
-  <data/>
+  <data>
+    <list>
+      <value>
+        <valueNumeric class="int">1</valueNumeric>
+        <valueString></valueString>
+        <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+    </list>
+  </data>
 </decision-table52>
