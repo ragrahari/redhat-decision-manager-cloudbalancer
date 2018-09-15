@@ -5,6 +5,7 @@ import com.model.Fleet;
 //from row number: 1
 //Created from row 2
 rule "Row 1 AdHocFleetCalculation"
+	salience 8
 	date-effective "27-Aug-2018"
 	date-expires "30-Sep-2018"
 	dialect "mvel"
@@ -18,6 +19,7 @@ end
 //from row number: 2
 //Created from row 3
 rule "Row 2 AdHocFleetCalculation"
+	salience 8
 	date-effective "27-Aug-2018"
 	date-expires "30-Aug-2018"
 	dialect "mvel"
@@ -31,6 +33,7 @@ end
 //from row number: 3
 //Created from row 4
 rule "Row 3 AdHocFleetCalculation"
+	salience 8
 	date-effective "27-Sep-2018"
 	date-expires "30-Sep-2018"
 	dialect "mvel"
