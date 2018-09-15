@@ -13,9 +13,7 @@ rule "Row 1 OverLoaded"
 		                     cpuLoad > "75" || networkLoad > "75" || memoryLoad > "75" ,
 		                     targetCapacity < (fleetObject.currentCapacity()+1) , filter == "false" )
 	then
-		modify( fleetObject ) {
-				setTargetCapacity( 1 )
-		}
+		modify(fleetObject){setTargetCapacity(1 + fleetObject.getTargetCapacity())};
 		System.out.println("Fired OverLoaded");
 end
 
@@ -30,9 +28,7 @@ rule "Row 2 OverLoaded"
 		                     cpuLoad > "75" || networkLoad > "75" || memoryLoad > "75" ,
 		                     targetCapacity < (fleetObject.currentCapacity()+1) , filter == "false" )
 	then
-		modify( fleetObject ) {
-				setTargetCapacity( 1 )
-		}
+		modify(fleetObject){setTargetCapacity(1 + fleetObject.getTargetCapacity())};
 		System.out.println("Fired OverLoaded");
 end
 
@@ -47,9 +43,7 @@ rule "Row 3 OverLoaded"
 		                     cpuLoad > "75" || networkLoad > "75" || memoryLoad > "75" ,
 		                     targetCapacity < (fleetObject.currentCapacity()+1) , filter == "false" )
 	then
-		modify( fleetObject ) {
-				setTargetCapacity( 1 )
-		}
+		modify(fleetObject){setTargetCapacity(1 + fleetObject.getTargetCapacity())};
 		System.out.println("Fired OverLoaded");
 end
 
@@ -64,9 +58,7 @@ rule "Row 4 OverLoaded"
 		                     cpuLoad > "75" || networkLoad > "75" || memoryLoad > "75" ,
 		                     targetCapacity < (fleetObject.currentCapacity()+1) , filter == "false" )
 	then
-		modify( fleetObject ) {
-				setTargetCapacity( 1 )
-		}
+		modify(fleetObject){setTargetCapacity(1 + fleetObject.getTargetCapacity())};
 		System.out.println("Fired OverLoaded");
 end
 
@@ -81,9 +73,7 @@ rule "Row 5 OverLoaded"
 		                     cpuLoad > "75" || networkLoad > "75" || memoryLoad > "75" ,
 		                     targetCapacity < (fleetObject.currentCapacity()+1) , filter == "false" )
 	then
-		modify( fleetObject ) {
-				setTargetCapacity( 1 )
-		}
+		modify(fleetObject){setTargetCapacity(1 + fleetObject.getTargetCapacity())};
 		System.out.println("Fired OverLoaded");
 end
 
@@ -98,8 +88,6 @@ rule "Row 6 OverLoaded"
 		                     cpuLoad > "75" || networkLoad > "75" || memoryLoad > "75" ,
 		                     targetCapacity < (fleetObject.currentCapacity()+1) , filter == "false" )
 	then
-		modify( fleetObject ) {
-				setTargetCapacity( 1 )
-		}
+		modify(fleetObject){setTargetCapacity(1 + fleetObject.getTargetCapacity())};
 		System.out.println("Fired OverLoaded");
 end
