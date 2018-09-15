@@ -26,20 +26,23 @@ public class Fleet implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("filter")
 	private java.lang.Boolean filter;
 
-	@org.kie.api.definition.type.Label(value = "instanceType")
+	@org.kie.api.definition.type.Label("instanceType")
 	private java.lang.String instanceType;
 
-	@org.kie.api.definition.type.Label(value = "cpuLoad")
+	@org.kie.api.definition.type.Label("cpuLoad")
 	private java.lang.Integer cpuLoad;
 
-	@org.kie.api.definition.type.Label(value = "memoryLoad")
+	@org.kie.api.definition.type.Label("memoryLoad")
 	private java.lang.Integer memoryLoad;
 
-	@org.kie.api.definition.type.Label(value = "networkLoad")
+	@org.kie.api.definition.type.Label("networkLoad")
 	private java.lang.Integer networkLoad;
 
-	@org.kie.api.definition.type.Label(value = "currentCapacity")
+	@org.kie.api.definition.type.Label("currentCapacity")
 	private java.lang.Integer currentCapacity;
+
+	@org.kie.api.definition.type.Label(value = "priceList")
+	private java.util.List<com.model.Price> priceList;
 
 	public Fleet() {
 	}
@@ -132,12 +135,21 @@ public class Fleet implements java.io.Serializable {
 		this.currentCapacity = currentCapacity;
 	}
 
+	public java.util.List<com.model.Price> getPriceList() {
+		return this.priceList;
+	}
+
+	public void setPriceList(java.util.List<com.model.Price> priceList) {
+		this.priceList = priceList;
+	}
+
 	public Fleet(java.lang.String id, java.lang.Integer targetCapacity,
 			java.lang.String name, java.lang.String availabilityZone,
 			java.lang.Integer currentTime, java.lang.Boolean filter,
 			java.lang.String instanceType, java.lang.Integer cpuLoad,
 			java.lang.Integer memoryLoad, java.lang.Integer networkLoad,
-			java.lang.Integer currentCapacity) {
+			java.lang.Integer currentCapacity,
+			java.util.List<com.model.Price> priceList) {
 		this.id = id;
 		this.targetCapacity = targetCapacity;
 		this.name = name;
@@ -149,6 +161,7 @@ public class Fleet implements java.io.Serializable {
 		this.memoryLoad = memoryLoad;
 		this.networkLoad = networkLoad;
 		this.currentCapacity = currentCapacity;
+		this.priceList = priceList;
 	}
 
 }
