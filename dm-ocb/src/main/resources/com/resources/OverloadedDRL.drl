@@ -2,8 +2,6 @@ package com.resources;
 
 import com.model.Fleet;
 
-//from row number: 1
-//Created from row 2
 rule "Row 1 OverLoaded"
 	no-loop true
 	salience 7
@@ -17,8 +15,6 @@ rule "Row 1 OverLoaded"
 		System.out.println("Fired OverLoaded");
 end
 
-//from row number: 2
-//Created from row 3
 rule "Row 2 OverLoaded"
 	no-loop true
 	salience 7
@@ -32,8 +28,6 @@ rule "Row 2 OverLoaded"
 		System.out.println("Fired OverLoaded");
 end
 
-//from row number: 3
-//Created from row 4
 rule "Row 3 OverLoaded"
 	no-loop true
 	salience 7
@@ -47,8 +41,6 @@ rule "Row 3 OverLoaded"
 		System.out.println("Fired OverLoaded");
 end
 
-//from row number: 4
-//Created from row 5
 rule "Row 4 OverLoaded"
 	no-loop true
 	salience 7
@@ -62,8 +54,6 @@ rule "Row 4 OverLoaded"
 		System.out.println("Fired OverLoaded");
 end
 
-//from row number: 5
-//Created from row 6
 rule "Row 5 OverLoaded"
 	no-loop true
 	salience 7
@@ -77,8 +67,6 @@ rule "Row 5 OverLoaded"
 		System.out.println("Fired OverLoaded");
 end
 
-//from row number: 6
-//Created from row 7
 rule "Row 6 OverLoaded"
 	no-loop true
 	salience 7
