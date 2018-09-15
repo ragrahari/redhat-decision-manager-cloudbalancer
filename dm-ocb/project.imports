@@ -2,6 +2,9 @@
   <imports>
     <imports>
       <import>
+        <type>com.model.Fleet</type>
+      </import>
+      <import>
         <type>java.lang.Boolean</type>
       </import>
       <import>
@@ -24,9 +27,6 @@
       </import>
       <import>
         <type>java.util.List</type>
-      </import>
-      <import>
-        <type>com.model.Fleet</type>
       </import>
     </imports>
   </imports>
