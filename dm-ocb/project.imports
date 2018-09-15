@@ -25,12 +25,6 @@
       <import>
         <type>java.util.List</type>
       </import>
-      <import>
-        <type>com.myteam.ocb.Fleet</type>
-      </import>
-      <import>
-        <type>com.model.Fleet</type>
-      </import>
     </imports>
   </imports>
   <version>1.0</version>
